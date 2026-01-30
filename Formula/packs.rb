@@ -44,6 +44,20 @@ class Packs < Formula
     end
   end
 
+  def caveats
+    <<~EOS
+      Get started by installing the packs skill:
+
+        packs get packs
+
+      Or browse available skills:
+
+        packs
+
+      Learn more at https://packs.sh
+    EOS
+  end
+
   test do
     system "#{bin}/packs", "--version"
   end
