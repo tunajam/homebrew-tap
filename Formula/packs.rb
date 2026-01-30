@@ -46,15 +46,15 @@ class Packs < Formula
 
   def caveats
     <<~EOS
-      Get started by installing the packs skill:
+      \e[1mSkills for AI agents. One command.\e[0m
 
-        packs get packs
+      Find what others built. Grab it. Share yours back.
 
-      Or browse available skills:
+      \e[32m→\e[0m Learn the CLI:     \e[36mpacks get packs\e[0m
+      \e[32m→\e[0m Browse skills:     \e[36mpacks\e[0m
+      \e[32m→\e[0m Search:            \e[36mpacks find <query>\e[0m
 
-        packs
-
-      Learn more at https://packs.sh
+      \e[90mhttps://packs.sh\e[0m
     EOS
   end
 
