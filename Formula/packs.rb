@@ -5,21 +5,21 @@
 class Packs < Formula
   desc "Agent skill package manager - share and install AI agent skills"
   homepage "https://packs.sh"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tunajam/packs/releases/download/v0.2.0/packs_0.2.0_darwin_amd64.tar.gz"
-      sha256 "51aef2b7314bbbcd99d6643b6f43d8a6bf42d84de3eb50682b3271e929243292"
+      url "https://github.com/tunajam/packs/releases/download/v0.2.1/packs_0.2.1_darwin_amd64.tar.gz"
+      sha256 "44c5edcb47e869384ef8364cb059da0dc1420bb30871538d8dc7bd52bc907dda"
 
       def install
         bin.install "packs"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tunajam/packs/releases/download/v0.2.0/packs_0.2.0_darwin_arm64.tar.gz"
-      sha256 "c4fb6533b212c5c460b8cecc587b09e170e2a93ae644b3cfa65bba0fb6ffccc4"
+      url "https://github.com/tunajam/packs/releases/download/v0.2.1/packs_0.2.1_darwin_arm64.tar.gz"
+      sha256 "2f84c6fce86cffe5ff0ad137a220069d6dfed9005fbbcd091896cac1c9f55d87"
 
       def install
         bin.install "packs"
@@ -29,15 +29,15 @@ class Packs < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tunajam/packs/releases/download/v0.2.0/packs_0.2.0_linux_amd64.tar.gz"
-      sha256 "98103fc8d208cedd5f9231e415399a2ce397ec6ae6f131be30589315fb06942f"
+      url "https://github.com/tunajam/packs/releases/download/v0.2.1/packs_0.2.1_linux_amd64.tar.gz"
+      sha256 "3eb49834e08500eb87b9014475cc7eb332e5ef86f1f8d62d9060c1b5214e6534"
       def install
         bin.install "packs"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tunajam/packs/releases/download/v0.2.0/packs_0.2.0_linux_arm64.tar.gz"
-      sha256 "9f59d461f6141dcaf3ab846cb5a0901f5dc093f3bf33c4c41645f5ac68d64f5b"
+      url "https://github.com/tunajam/packs/releases/download/v0.2.1/packs_0.2.1_linux_arm64.tar.gz"
+      sha256 "58f60dac5c7f841f53fb2ea047fe8951bc5e562b9438fe438e1914f1492d6286"
       def install
         bin.install "packs"
       end
