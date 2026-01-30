@@ -5,21 +5,21 @@
 class Packs < Formula
   desc "Agent skill package manager - share and install AI agent skills"
   homepage "https://packs.sh"
-  version "0.1.3"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tunajam/packs/releases/download/v0.1.3/packs_0.1.3_darwin_amd64.tar.gz"
-      sha256 "72049eaa7ffbde4bdc1ccf933adda3b3a2de535c04575160ca3d15001155ae30"
+      url "https://github.com/tunajam/packs/releases/download/v0.2.0/packs_0.2.0_darwin_amd64.tar.gz"
+      sha256 "51aef2b7314bbbcd99d6643b6f43d8a6bf42d84de3eb50682b3271e929243292"
 
       def install
         bin.install "packs"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tunajam/packs/releases/download/v0.1.3/packs_0.1.3_darwin_arm64.tar.gz"
-      sha256 "c8b60af29c4cc812aec03b75ff113812f2a7497796723106835bbccf4046f993"
+      url "https://github.com/tunajam/packs/releases/download/v0.2.0/packs_0.2.0_darwin_arm64.tar.gz"
+      sha256 "c4fb6533b212c5c460b8cecc587b09e170e2a93ae644b3cfa65bba0fb6ffccc4"
 
       def install
         bin.install "packs"
@@ -29,33 +29,19 @@ class Packs < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tunajam/packs/releases/download/v0.1.3/packs_0.1.3_linux_amd64.tar.gz"
-      sha256 "ac7d4ff32757ec714317183d2f84a568c4c923c90eeafa081a8e8db1bbf34acf"
+      url "https://github.com/tunajam/packs/releases/download/v0.2.0/packs_0.2.0_linux_amd64.tar.gz"
+      sha256 "98103fc8d208cedd5f9231e415399a2ce397ec6ae6f131be30589315fb06942f"
       def install
         bin.install "packs"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tunajam/packs/releases/download/v0.1.3/packs_0.1.3_linux_arm64.tar.gz"
-      sha256 "0f1027ec20059abf9d5218c1c65badca5f375ea6dc669f9c366576d3a757266d"
+      url "https://github.com/tunajam/packs/releases/download/v0.2.0/packs_0.2.0_linux_arm64.tar.gz"
+      sha256 "9f59d461f6141dcaf3ab846cb5a0901f5dc093f3bf33c4c41645f5ac68d64f5b"
       def install
         bin.install "packs"
       end
     end
-  end
-
-  def caveats
-    <<~EOS
-      \e[1mSkills for AI agents. One command.\e[0m
-
-      Find what others built. Grab it. Share yours back.
-
-      \e[32m→\e[0m Learn the CLI:     \e[36mpacks get packs\e[0m
-      \e[32m→\e[0m Browse skills:     \e[36mpacks\e[0m
-      \e[32m→\e[0m Search:            \e[36mpacks find <query>\e[0m
-
-      \e[90mhttps://packs.sh\e[0m
-    EOS
   end
 
   test do
