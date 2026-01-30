@@ -11,7 +11,7 @@ class Packs < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/tunajam/packs/releases/download/v0.1.0/packs_0.1.0_darwin_amd64.tar.gz"
-      sha256 "841ec8a2b6b2442e6ada913e65b3642c5c8d5098b8eeaa40a560175eac642019"
+      sha256 "3c86877f69ea9ec4d9ad08713f40109b83be2d8336782b722dead9883d04ecf7"
 
       def install
         bin.install "packs"
@@ -19,7 +19,7 @@ class Packs < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/tunajam/packs/releases/download/v0.1.0/packs_0.1.0_darwin_arm64.tar.gz"
-      sha256 "1bede5d5e6d0e8f7391f9294bd2756fcdd2a51f8e22cd4eb2e0ad808d5371182"
+      sha256 "a51769f6040abb760069acbbfb536b81c9fde22e286816ee2e0e5cad9a856179"
 
       def install
         bin.install "packs"
@@ -30,14 +30,14 @@ class Packs < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/tunajam/packs/releases/download/v0.1.0/packs_0.1.0_linux_amd64.tar.gz"
-      sha256 "303d94d9fad37121d4a6684015ce04679605a9250a825dcbeddc74f4c59f02d7"
+      sha256 "5f2b44d200300e59149e55a82ab7016bc5d4166c3693615d8fcd76e95f8023cb"
       def install
         bin.install "packs"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/tunajam/packs/releases/download/v0.1.0/packs_0.1.0_linux_arm64.tar.gz"
-      sha256 "0c6b34b993d848d6af0f0c9555da1fa35caf17da9d65d730a151c469d4830270"
+      sha256 "0fda5384d9ce1149590fe7ffc2cf9fa1ab5ea9a7531c0486821c72c0a98ba665"
       def install
         bin.install "packs"
       end
