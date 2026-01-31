@@ -44,6 +44,19 @@ class Packs < Formula
     end
   end
 
+  def caveats
+    <<~EOS
+      🎒 packs is ready! Try these commands:
+
+        packs                      # Browse packs in TUI
+        packs find <query>         # Search for packs
+        packs get <name>           # Install a pack
+        packs get gh:user/repo/path  # Install from GitHub
+
+      Docs: https://packs.sh
+    EOS
+  end
+
   test do
     system "#{bin}/packs", "--version"
   end
